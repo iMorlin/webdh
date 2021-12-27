@@ -6,7 +6,7 @@
                 <i class="material-icons white-text" @click="redirectToLink('./')">Dream House</i>
             </div>
             <div class="navbar-right">
-                <button class="btn cart #eceff1 blue-grey lighten-3" @click="redirectToLink('./Cart')" >
+                <button class="btn cart #eceff1 blue-grey lighten-3 z-depth-0" @click="redirectToLink('./Cart')" >
                 </button>
             </div>
         </div>
@@ -54,7 +54,6 @@ button.btn{
     background-image: url("../assets/images/Cart.jpg");
     background-size: contain;
     background-repeat: no-repeat;
-    box-shadow: none;
 }
 .empty-layout{
     background: #eceff1 ;

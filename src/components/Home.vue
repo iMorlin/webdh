@@ -1,6 +1,6 @@
 <template>
     <div class="empty-layout">
-        <p>Home</p>
+        <p>Home TODO</p>
     </div>
 </template>
 
