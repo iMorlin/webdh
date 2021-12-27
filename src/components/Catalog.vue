@@ -1,9 +1,5 @@
 <template>
-    <div class="CCatalog">
+    <div class="empty-layout">
+        <p>Catalog</p>
     </div>
 </template>
-
-<script>
-export default {
-}
-</script>

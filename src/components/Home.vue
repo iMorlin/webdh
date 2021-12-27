@@ -1,5 +1,6 @@
 <template>
     <div class="empty-layout">
-        <p>Cart</p>
+        <p>Home</p>
     </div>
 </template>
+

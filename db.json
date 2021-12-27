@@ -1,19 +1,64 @@
 {
-  "posts": [
+  "products": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "image": "image 1.jpg",
+      "name": "Kit 1",
+      "price": 2100
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+      "image": "image 2.jpg",
+      "name": "Kit 2",
+      "price": 2100
+    },
+    {
+      "image": "image 3.jpg",
+      "name": "Kit 3",
+      "price": 2100
+    },
+    {
+      "image": "image 4.jpg",
+      "name": "Kit 4",
+      "price": 2100
+    },
+    {
+      "image": "image 5.jpg",
+      "name": "Kit 5",
+      "price": 2100
+    },
+    {
+      "image": "image 6.jpg",
+      "name": "Kit 6",
+      "price": 2100
+    },
+    {
+      "image": "image 7.jpg",
+      "name": "Kit 7",
+      "price": 2100
+    },
+    {
+      "image": "image 8.jpg",
+      "name": "Kit 8",
+      "price": 2100
+    },
+    {
+      "image": "image 9.jpg",
+      "name": "Kit 9",
+      "price": 2100
+    },
+    {
+      "image": "image 10.jpg",
+      "name": "Kit 10",
+      "price": 2100
+    },
+    {
+      "image": "image 11.jpg",
+      "name": "Kit 11",
+      "price": 2100
+    },
+    {
+      "image": "image 12.jpg",
+      "name": "Kit 12",
+      "price": 2100
+    }    
+  ]
 }

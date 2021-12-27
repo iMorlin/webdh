@@ -1,30 +1,23 @@
 <template>
   <div id="app">
-    <component :is="layout">
-      <router-view/>
-    </component>
+    <MainLayout/>
   </div>
 </template>
 
 <script>
-import EmptyLayout from './layouts/EmptyLayouts.vue'
-import MainLayout from './layouts/MainLayout.vue'
+import MainLayout from './components/MainLayout.vue'
 export default {
-  computed:
-  {
-    layout()
-    {
-      console.log(this.$route.meta)
-      return (this.$route.meta.layout || 'empty') + '-layout'
-    }
-  },
-  components:
-  {
-    EmptyLayout, MainLayout
+  components: {
+    MainLayout
   }
 }
 </script>
 <style>
+@font-face {
+  font-family: "Arsenica";
+  src: local("Arsenica"),
+    url("./assets/styles/fonts/Arsenica-Alt-Regular-trial.ttf");
+}
 @import '~materialize-css/dist/css/materialize.min.css';
 @import 'assets/index.css';
 </style>
