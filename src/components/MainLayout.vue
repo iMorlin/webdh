@@ -58,4 +58,8 @@ button.btn{
 .empty-layout{
     background: #eceff1 ;
 }
+.row
+{ 
+    background: #eceff1 ;
+}
 </style>
