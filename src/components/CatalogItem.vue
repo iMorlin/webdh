@@ -1,5 +1,5 @@
 <template>
-    <div class="col s4">
+    <div class="col s3">
         <div class="card">
             <div class="card-image">
                 <img :src=" require('../assets/images/' + productData.image)" alt="img">
@@ -13,7 +13,8 @@
                 </p>
             </div>
             <div class="card-action">
-                <a href="#">Add to cart</a>
+                <button @click="sendDataToParet">Add to cart
+                </button>
             </div>      
         </div>
     </div>
@@ -27,6 +28,11 @@ export default {
             default(){
                 return;
             }
+        }
+    },
+    methods:{
+        sendDataToParet(){
+            this.$emit('sendArtcle', this.productData.article)
         }
     }
 }
