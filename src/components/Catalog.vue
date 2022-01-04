@@ -5,7 +5,7 @@
                 v-for="product in PRODUCTS"
                 :key="product.article"
                 :productData="product"
-                @sendArtcle="DataEvent"
+                @addToCart="addToCart"
             />
         </div>
     </div>
@@ -26,8 +26,7 @@ export default {
         ...mapActions([
             'GET_PRODUCTS_FROM_API'
         ]),
-        DataEvent(data)
-        {
+        addToCart(data){
             console.log(data)
         }
     },

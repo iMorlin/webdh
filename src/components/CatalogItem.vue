@@ -13,7 +13,7 @@
                 </p>
             </div>
             <div class="card-action">
-                <button @click="sendDataToParet">Add to cart
+                <button @click="AddToCart">Add to cart
                 </button>
             </div>      
         </div>
@@ -31,8 +31,8 @@ export default {
         }
     },
     methods:{
-        sendDataToParet(){
-            this.$emit('sendArtcle', this.productData.article)
+        AddToCart(){
+            this.$emit('addToCart', this.productData)
         }
     }
 }
