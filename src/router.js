@@ -20,7 +20,8 @@ const routes = [
     path: '/Cart',
     name: 'Cart',
     meta: { View: "Cart" },
-    component: () => import("./components/Cart.vue")
+    component: () => import("./components/Cart.vue"),
+    props: true
   }
 ]
 

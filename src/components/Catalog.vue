@@ -24,10 +24,11 @@ export default {
     },
     methods:{
         ...mapActions([
-            'GET_PRODUCTS_FROM_API'
+            'GET_PRODUCTS_FROM_API',
+            'ADD_TO_CART'
         ]),
         addToCart(data){
-            console.log(data)
+            this.ADD_TO_CART(data);
         }
     },
     mounted() {        

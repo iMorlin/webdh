@@ -3,11 +3,16 @@
     <nav class="navbar #eceff1 blue-grey lighten-3">
         <div class="nav-wrapper">
             <div class="navbar-left">
-                <i class="material-icons white-text" @click="redirectToLink('./')">Dream House</i>
+                <router-link :to="{name:'Catalog'}">
+                    <i class="material-icons white-text" @click="redirectToLink('./')">Dream House</i>
+                </router-link>
             </div>
             <div class="navbar-right">
-                <button class="btn cart #eceff1 blue-grey lighten-3 z-depth-0" @click="redirectToLink('./Cart')" >
+                <router-link :to="{name:'Cart'}">
+                    <button class="btn cart #eceff1 blue-grey lighten-3 z-depth-0">
+                    <p>{{CART.length}}</p>
                 </button>
+                </router-link>
             </div>
         </div>
     </nav>
@@ -21,9 +26,11 @@
 import Home from "./Home.vue"
 import Catalog from "./Catalog.vue"
 import Cart from "./Cart.vue"
+import {mapGetters} from 'vuex'
 export default {
     computed:
     {
+        ...mapGetters(['CART']),
         View()
         {
             console.log(this.$route.meta)
@@ -32,12 +39,6 @@ export default {
     },
     components:{
         Home, Catalog, Cart
-    },
-    methods:
-    {
-        redirectToLink(link) {
-            window.location = link;
-        }
     }
 }
 </script>
