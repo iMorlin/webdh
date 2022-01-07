@@ -9,15 +9,17 @@
             </div>
             <div class="navbar-right">
                 <router-link :to="{name:'Cart'}">
-                    <button class="btn cart #eceff1 blue-grey lighten-3 z-depth-0">
-                    <p>{{CART.length}}</p>
-                </button>
+                    <button class="btn cart #eceff1 blue-grey lighten-3 z-depth-0" id="Button">                                
+                    </button>
+                    <span class="badge badge-warning" id='lblCartCount'>{{CART.length}} </span>     
                 </router-link>
             </div>
         </div>
     </nav>
     <component :is="View"> 
-      <router-view/>
+        <keep-alive>
+            <router-view/>
+        </keep-alive>
     </component>
   </div>
 </template>
@@ -55,6 +57,7 @@ button.btn{
     background-image: url("../assets/images/Cart.jpg");
     background-size: contain;
     background-repeat: no-repeat;
+    width: 40px;
 }
 .empty-layout{
     background: #eceff1 ;
@@ -62,5 +65,15 @@ button.btn{
 .row
 { 
     background: #eceff1 ;
+}
+#lblCartCount {
+    color: #fff;
+    vertical-align: bottom;
+    margin-left: -17px; 
+    margin-top: 7px; 
+}
+
+.header{
+    color: #b0bec5;
 }
 </style>

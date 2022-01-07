@@ -1,28 +1,28 @@
 <template>        
 <!-- переделать -->
-        <div class="row"> 
-            <div class="col s3">
-                <img :src=" require('../assets/images/' + cartItemData.image)" alt="img">
-                <p class="card-title">{{cartItemData.name}}</p>
-            </div>
-            <div class="col s3">
+        <tr> 
+            <td>
+                <img class="image" :src=" require('../assets/images/' + cartItemData.image)" alt="img">
+            </td>
+            <td>
+                <p>{{cartItemData.name}}</p>
+            </td>
+            <td>
                 <p>
                     {{cartItemData.price}}
-                    <br><br>
-                    {{cartItemData.description}}
                 </p>
-            </div>
-            <div class="col s3">
-                <button 
-                    @click="Delete">Add to cart
-                </button>
-            </div>            
-            <div class="col s3">
+            </td>      
+            <td>
                 <p>
                     {{cartItemData.count}}
                 </p>
-            </div>
-        </div>
+            </td>
+            <td>
+                <button 
+                    @click="Delete">Delete
+                </button>
+            </td>      
+        </tr>
 </template>
 
 <script>
@@ -39,9 +39,12 @@ export default {
         Delete(){
             this.$emit('Delete')
         }
-    },
-    mounted(){
-        this.$set(this.cartItemData, "count", 1)
     }
 }
 </script>
+
+<style>
+.image{
+    width: 200px;
+}
+</style>

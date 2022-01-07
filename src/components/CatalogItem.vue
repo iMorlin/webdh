@@ -34,6 +34,9 @@ export default {
         AddToCart(){
             this.$emit('addToCart', this.productData)
         }
+    },
+    mounted(){
+        this.$set(this.productData, "count", 1)
     }
 }
 </script>

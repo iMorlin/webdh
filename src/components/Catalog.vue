@@ -1,13 +1,14 @@
 <template>
-    <div class="empty-layout">
-        <div class="row">
-            <CatalogItem
-                v-for="product in PRODUCTS"
-                :key="product.article"
-                :productData="product"
-                @addToCart="addToCart"
-            />
-        </div>
+    <div class="empty-layout">     
+        <h1 class="header"> Catalog </h1> 
+            <div class="row">
+                <CatalogItem
+                    v-for="product in PRODUCTS"
+                    :key="product.article"
+                    :productData="product"
+                    @addToCart="addToCart"
+                />
+            </div>
     </div>
 </template> 
 

@@ -1,12 +1,18 @@
 <template>
     <div class="empty-layout">    
-        <p>{{CART.length}}</p>   
-        <CartItem
-            v-for="(item, index) in CART"
-            :key="item.article"
-            :cartItemData="item"
-            @Delete="Delete(index)"
-        />
+        <h1 class="header">Items in the cart: {{CART.length}}</h1>           
+        <div class="container">
+            <table class="striped">
+                <tbody>
+                    <CartItem
+                        v-for="(item, index) in CART"
+                        :key="item.article"
+                        :cartItemData="item"
+                        @Delete="Delete(index)"
+                    />      
+                </tbody>  
+            </table>
+        </div>
     </div>
 </template>
 
